@@ -11,7 +11,6 @@ import torch
 import os
 from diffusers.utils import load_image
 from diffusers import EulerDiscreteScheduler
-from photomaker import PhotoMakerStablediffusionXLPipeline
 from PIL import Image
 import gradio as gr
 
