@@ -1,2 +1,2 @@
-# photomaker
+# photomaker-webui
 photomaker-webui
