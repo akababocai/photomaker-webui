@@ -17,7 +17,7 @@ import gradio as gr
 photomaker_path = hf_hub_download(repo_id="TencentARC/PhotoMaker",filename="photomaker-v1.bin",
 repo_type="model")
 base_model_path = 'SG161222/RealVisXL_V3.0'
-device = "cuda" if torch.cuda.is_available() else "cup"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 pipe = PhotoMakerStableDiffusionXLPipeline.from_pretrained(base_model_path,torch_dtype=torch.bfloat16,
 use_safetensors=True,variant="fp16").to(device)
 pipe.load_photomaker_adapter(os.path.dirname(photomaker_path),subfolder="",
